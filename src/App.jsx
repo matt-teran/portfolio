@@ -151,7 +151,7 @@ function App() {
                   'A microservice that can handle thousands of requests per second.',
                 github: 'https://github.com/SDC-Team-Miami/Reviews-API',
                 photos: [
-                  'https://github.com/matt-teran/portfolio/blob/main/assets/nestjs-postgres.png',
+                  'https://github.com/matt-teran/portfolio/blob/main/assets/nestjs-postgres.png?raw=true',
                 ],
               }}
             />
@@ -162,9 +162,9 @@ function App() {
                   'A time management solution that can be paired with any activity or workflow.',
                 github: 'https://github.com/Matt-Teran/Pomodoro-Buddy',
                 photos: [
-                  'https://github.com/matt-teran/portfolio/blob/main/assets/pb-1.png',
-                  'https://github.com/matt-teran/portfolio/blob/main/assets/pb-2.png',
-                  'https://github.com/matt-teran/portfolio/blob/main/assets/pb-3.png',
+                  'https://github.com/matt-teran/portfolio/blob/main/assets/pb-1.png?raw=true',
+                  'https://github.com/matt-teran/portfolio/blob/main/assets/pb-2.png?raw=true',
+                  'https://github.com/matt-teran/portfolio/blob/main/assets/pb-3.png?raw=true',
                 ],
               }}
             />
@@ -193,7 +193,7 @@ function App() {
             cover={
               <img
                 alt="example"
-                src="https://github.com/matt-teran/portfolio/blob/main/assets/hr.png"
+                src="https://github.com/matt-teran/portfolio/blob/main/assets/hr.png?raw=true"
               />
             }
             actions={[
