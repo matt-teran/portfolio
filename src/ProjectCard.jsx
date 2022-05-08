@@ -6,18 +6,17 @@ import { useState } from 'react';
 
 export default function ProjectCard({ app }) {
   const [visible, setVisible] = useState(false);
-  console.log(app);
   return (
     <Card
       style={{
-        width: 300,
+        width: '25%',
       }}
       hoverable
       cover={
         <>
           <Image
             preview={{ visible: false }}
-            width={300}
+            width="100%"
             src={app.photos[0]}
             onClick={() => setVisible(true)}
           />
@@ -29,7 +28,7 @@ export default function ProjectCard({ app }) {
               }}
             >
               {app.photos.map((photo) => {
-                return <Image src={photo} />;
+                return <Image key={photo} src={photo} />;
               })}
             </Image.PreviewGroup>
           </div>

@@ -53,10 +53,21 @@ function App() {
             mode="horizontal"
             defaultSelectedKeys={['mail']}
           >
-            <Menu.Item key="about">About</Menu.Item>
-            <Menu.Item key="projects">Featured Projects</Menu.Item>
-            <Menu.Item key="experience">Professional Experience</Menu.Item>
-            <Menu.Item key="education">Education</Menu.Item>
+            <Menu.Item key="about" href="#about">
+              <Button type="text" href="#about">
+                About
+              </Button>
+            </Menu.Item>
+            <Menu.Item key="projects">
+              <Button type="text" href="#featured">
+                Featured Projects
+              </Button>
+            </Menu.Item>
+            <Menu.Item key="education">
+              <Button href="#education" type="text">
+                Education
+              </Button>
+            </Menu.Item>
           </Menu>
         </Header>
         <Content
@@ -93,6 +104,7 @@ function App() {
               target="_blank"
               shape="circle"
               icon={<InstagramFilled />}
+              id="about"
             />
           </Space>
         </Content>
@@ -107,7 +119,7 @@ function App() {
           <Divider>
             <Title level={3}>About Me</Title>
           </Divider>
-          <Title level={5} style={{ width: '60%' }}>
+          <Title level={5} style={{ width: '60%' }} id="featured">
             I believe that my life is a never-ending journey of learning, and
             this is why I’m deeply passionate about coding. There is a limitless
             fountain of things to learn in software development. I’m a patient,
@@ -118,6 +130,11 @@ function App() {
             certain I can be an industrious member of any team I'm a part of.
           </Title>
         </Content>
+        {/* <Content>
+          <Divider>
+            <Title level={3}>Technologies</Title>
+          </Divider>
+        </Content> */}
         <Content>
           <Divider>
             <Title level={3}>Featured Projects</Title>
@@ -150,9 +167,7 @@ function App() {
                 description:
                   'A microservice that can handle thousands of requests per second.',
                 github: 'https://github.com/SDC-Team-Miami/Reviews-API',
-                photos: [
-                  'https://github.com/matt-teran/portfolio/blob/main/assets/nestjs-postgres.png?raw=true',
-                ],
+                photos: ['/assets/nestjs-postgres.png'],
               }}
             />
             <ProjectCard
@@ -162,20 +177,15 @@ function App() {
                   'A time management solution that can be paired with any activity or workflow.',
                 github: 'https://github.com/Matt-Teran/Pomodoro-Buddy',
                 photos: [
-                  'https://github.com/matt-teran/portfolio/blob/main/assets/pb-1.png?raw=true',
-                  'https://github.com/matt-teran/portfolio/blob/main/assets/pb-2.png?raw=true',
-                  'https://github.com/matt-teran/portfolio/blob/main/assets/pb-3.png?raw=true',
+                  '/assets/pb-1.png',
+                  '/assets/pb-2.png',
+                  '/assets/pb-3.png',
                 ],
               }}
             />
           </Layout>
         </Content>
-        {/* <Content>
-          <Divider>
-            <Title level={3}>Professional Experience</Title>
-          </Divider>
-        </Content> */}
-        <Content>
+        <Content id="education">
           <Divider>
             <Title level={3}>Education</Title>
           </Divider>
@@ -190,12 +200,7 @@ function App() {
         >
           <Card
             style={{ width: 500 }}
-            cover={
-              <img
-                alt="example"
-                src="https://github.com/matt-teran/portfolio/blob/main/assets/hr.png?raw=true"
-              />
-            }
+            cover={<img alt="example" src="/assets/hr.png" />}
             actions={[
               <Button
                 href="https://www.hackreactor.com/"
@@ -230,8 +235,18 @@ function App() {
           </Card>
         </Content>
         <Footer>
-          <Button shape="circle" icon={<GithubFilled />} />
-          <Button shape="circle" icon={<LinkedinFilled />} />
+          <Button
+            href="https://github.com/matt-teran/"
+            target="_blank"
+            shape="circle"
+            icon={<GithubFilled />}
+          />
+          <Button
+            href="https://www.linkedin.com/in/matt-teran/"
+            target="_blank"
+            shape="circle"
+            icon={<LinkedinFilled />}
+          />
         </Footer>
       </Layout>
     </div>
