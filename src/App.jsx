@@ -150,7 +150,9 @@ function App() {
                 description:
                   'A microservice that can handle thousands of requests per second.',
                 github: 'https://github.com/SDC-Team-Miami/Reviews-API',
-                photos: ['/assets/nestjs-postgres.png'],
+                photos: [
+                  'https://github.com/matt-teran/portfolio/blob/main/assets/nestjs-postgres.png',
+                ],
               }}
             />
             <ProjectCard
@@ -160,9 +162,9 @@ function App() {
                   'A time management solution that can be paired with any activity or workflow.',
                 github: 'https://github.com/Matt-Teran/Pomodoro-Buddy',
                 photos: [
-                  '/assets/pb-1.png',
-                  '/assets/pb-2.png',
-                  '/assets/pb-3.png',
+                  'https://github.com/matt-teran/portfolio/blob/main/assets/pb-1.png',
+                  'https://github.com/matt-teran/portfolio/blob/main/assets/pb-2.png',
+                  'https://github.com/matt-teran/portfolio/blob/main/assets/pb-3.png',
                 ],
               }}
             />
@@ -188,7 +190,12 @@ function App() {
         >
           <Card
             style={{ width: 500 }}
-            cover={<img alt="example" src="/assets/hr.png" />}
+            cover={
+              <img
+                alt="example"
+                src="https://github.com/matt-teran/portfolio/blob/main/assets/hr.png"
+              />
+            }
             actions={[
               <Button
                 href="https://www.hackreactor.com/"
