@@ -16,10 +16,12 @@ import {
   InstagramFilled,
   LinkedinFilled,
   TwitterCircleFilled,
+  LinkOutlined,
 } from '@ant-design/icons';
 import './App.css';
 import Meta from 'antd/lib/card/Meta';
 import { useState } from 'react';
+import ProjectCard from './ProjectCard';
 
 function App() {
   const [visible, setVisible] = useState(false);
@@ -29,7 +31,7 @@ function App() {
     <div className="App">
       <Layout
         style={{
-          height: '375vh',
+          height: '300vh',
         }}
       >
         <Header
@@ -51,7 +53,7 @@ function App() {
             mode="horizontal"
             defaultSelectedKeys={['mail']}
           >
-            <Menu.Item key="about">About Me</Menu.Item>
+            <Menu.Item key="about">About</Menu.Item>
             <Menu.Item key="projects">Featured Projects</Menu.Item>
             <Menu.Item key="experience">Professional Experience</Menu.Item>
             <Menu.Item key="education">Education</Menu.Item>
@@ -68,10 +70,30 @@ function App() {
           <Title level={5}>Hi, my name is</Title>
           <Title style={{ marginTop: '-0.1em' }}>Matt Teran</Title>
           <Space style={{ display: 'flex', justifyContent: 'center' }}>
-            <Button shape="circle" icon={<GithubFilled />} />
-            <Button shape="circle" icon={<LinkedinFilled />} />
-            <Button shape="circle" icon={<TwitterCircleFilled />} />
-            <Button shape="circle" icon={<InstagramFilled />} />
+            <Button
+              href="https://github.com/matt-teran/"
+              target="_blank"
+              shape="circle"
+              icon={<GithubFilled />}
+            />
+            <Button
+              href="https://www.linkedin.com/in/matt-teran/"
+              target="_blank"
+              shape="circle"
+              icon={<LinkedinFilled />}
+            />
+            <Button
+              href="https://twitter.com/GESVNDRIAN"
+              target="_blank"
+              shape="circle"
+              icon={<TwitterCircleFilled />}
+            />
+            <Button
+              href="https://www.instagram.com/matt.teran/"
+              target="_blank"
+              shape="circle"
+              icon={<InstagramFilled />}
+            />
           </Space>
         </Content>
         <Content
@@ -108,136 +130,49 @@ function App() {
               alignItems: 'center',
             }}
           >
-            <Card
-              style={{
-                width: 300,
+            <ProjectCard
+              app={{
+                name: 'BestestBuy',
+                description:
+                  'A retail application frontend that consists of four sections: Product Overview, Related Products, Q & A, and Reviews.',
+                github: 'https://github.com/RFCTeamSaturn/BestestBuy',
+                photos: [
+                  'https://github.com/RFCTeamSaturn/BestestBuy/raw/main/image/overview.png',
+                  'https://github.com/RFCTeamSaturn/BestestBuy/raw/main/image/relatedProduct.png',
+                  'https://github.com/RFCTeamSaturn/BestestBuy/raw/main/image/QandA.png',
+                  'https://github.com/RFCTeamSaturn/BestestBuy/raw/main/image/RatingReview.png',
+                ],
               }}
-              cover={
-                <>
-                  <Image
-                    preview={{ visible: false }}
-                    width={300}
-                    src="https://github.com/RFCTeamSaturn/BestestBuy/raw/main/image/overview.png"
-                    onClick={() => setVisible(true)}
-                  />
-                  <div style={{ display: 'none' }}>
-                    <Image.PreviewGroup
-                      preview={{
-                        visible,
-                        onVisibleChange: (vis) => setVisible(vis),
-                      }}
-                    >
-                      <Image src="https://github.com/RFCTeamSaturn/BestestBuy/raw/main/image/overview.png" />
-                      <Image src="https://github.com/RFCTeamSaturn/BestestBuy/raw/main/image/relatedProduct.png" />
-                      <Image src="https://github.com/RFCTeamSaturn/BestestBuy/raw/main/image/QandA.png" />
-                      <Image src="https://github.com/RFCTeamSaturn/BestestBuy/raw/main/image/RatingReview.png" />
-                    </Image.PreviewGroup>
-                  </div>
-                </>
-              }
-              actions={[
-                <Button
-                  href="https://github.com/RFCTeamSaturn/BestestBuy"
-                  target="_blank"
-                  shape="circle"
-                  icon={<GithubFilled />}
-                />,
-              ]}
-            >
-              <Meta
-                title="BestestBuy"
-                description="A retail application frontend that consists of four sections: Product Overview, Related Products, Q & A, and Reviews.                "
-              />
-            </Card>
-            <Card
-              style={{
-                width: 300,
+            />
+            <ProjectCard
+              app={{
+                name: 'Reviews API',
+                description:
+                  'A microservice that can handle thousands of requests per second.',
+                github: 'https://github.com/SDC-Team-Miami/Reviews-API',
+                photos: ['/assets/nestjs-postgres.png'],
               }}
-              cover={
-                <>
-                  <Image
-                    preview={{ visible: false }}
-                    width={300}
-                    src="/assets/nestjs-postgres.png"
-                    onClick={() => setVisible(true)}
-                  />
-                  <div style={{ display: 'none' }}>
-                    <Image.PreviewGroup
-                      preview={{
-                        visible,
-                        onVisibleChange: (vis) => setVisible(vis),
-                      }}
-                    >
-                      <Image src="https://github.com/RFCTeamSaturn/BestestBuy/raw/main/image/overview.png" />
-                      <Image src="https://github.com/RFCTeamSaturn/BestestBuy/raw/main/image/relatedProduct.png" />
-                      <Image src="https://github.com/RFCTeamSaturn/BestestBuy/raw/main/image/QandA.png" />
-                      <Image src="https://github.com/RFCTeamSaturn/BestestBuy/raw/main/image/RatingReview.png" />
-                    </Image.PreviewGroup>
-                  </div>
-                </>
-              }
-              actions={[
-                <Button
-                  href="https://github.com/SDC-Team-Miami/Reviews-API"
-                  target="_blank"
-                  shape="circle"
-                  icon={<GithubFilled />}
-                />,
-              ]}
-            >
-              <Meta
-                title="Reviews API"
-                description="A microservice that can handle thousands of requests per second."
-              />
-            </Card>
-            <Card
-              style={{
-                width: 300,
+            />
+            <ProjectCard
+              app={{
+                name: 'Pomodoro Buddy',
+                description:
+                  'A time management solution that can be paired with any activity or workflow.',
+                github: 'https://github.com/Matt-Teran/Pomodoro-Buddy',
+                photos: [
+                  '/assets/pb-1.png',
+                  '/assets/pb-2.png',
+                  '/assets/pb-3.png',
+                ],
               }}
-              cover={
-                <>
-                  <Image
-                    preview={{ visible: false }}
-                    width={300}
-                    src="/assets/mern-stack.png"
-                    onClick={() => setVisible(true)}
-                  />
-                  <div style={{ display: 'none' }}>
-                    <Image.PreviewGroup
-                      preview={{
-                        visible,
-                        onVisibleChange: (vis) => setVisible(vis),
-                      }}
-                    >
-                      <Image src="https://github.com/RFCTeamSaturn/BestestBuy/raw/main/image/overview.png" />
-                      <Image src="https://github.com/RFCTeamSaturn/BestestBuy/raw/main/image/relatedProduct.png" />
-                      <Image src="https://github.com/RFCTeamSaturn/BestestBuy/raw/main/image/QandA.png" />
-                      <Image src="https://github.com/RFCTeamSaturn/BestestBuy/raw/main/image/RatingReview.png" />
-                    </Image.PreviewGroup>
-                  </div>
-                </>
-              }
-              actions={[
-                <Button
-                  href="https://github.com/Matt-Teran/Pomodoro-Buddy"
-                  target="_blank"
-                  shape="circle"
-                  icon={<GithubFilled />}
-                />,
-              ]}
-            >
-              <Meta
-                title="Pomodoro Buddy"
-                description="A time management solution that can be paired with any activity or workflow."
-              />
-            </Card>
+            />
           </Layout>
         </Content>
-        <Content>
+        {/* <Content>
           <Divider>
             <Title level={3}>Professional Experience</Title>
           </Divider>
-        </Content>
+        </Content> */}
         <Content>
           <Divider>
             <Title level={3}>Education</Title>
@@ -250,7 +185,43 @@ function App() {
             justifyContent: 'space-evenly',
             alignItems: 'center',
           }}
-        ></Content>
+        >
+          <Card
+            style={{ width: 500 }}
+            cover={<img alt="example" src="/assets/hr.png" />}
+            actions={[
+              <Button
+                href="https://www.hackreactor.com/"
+                target="_blank"
+                icon={<LinkOutlined />}
+              />,
+            ]}
+            hoverable
+          >
+            <Meta
+              title="Hack Reactor @ Galvanize"
+              description={
+                <>
+                  <Paragraph>
+                    Advanced Software Engineering Immersive Program
+                  </Paragraph>
+                  <Paragraph>February 2022 - May 2022</Paragraph>
+                  <Paragraph>
+                    13-week software engineering immersive program with over
+                    1000+ hours of coding. Full-Stack development with
+                    TypeScript, React, Express, PostgreSQL, MongoDB, and MySQL
+                    in an AGILE environment.
+                  </Paragraph>
+                  <Paragraph>
+                    Relevant Coursework: JavaScript ES6, TypeScript, React,
+                    Node, Express, Fastify, jQuery, HTML, CSS, Sass, Heroku,
+                    Docker, MySQL, MongoDB, AWS, Jest, Mocha, and Chai.
+                  </Paragraph>
+                </>
+              }
+            />
+          </Card>
+        </Content>
         <Footer>
           <Button shape="circle" icon={<GithubFilled />} />
           <Button shape="circle" icon={<LinkedinFilled />} />
