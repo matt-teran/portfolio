@@ -22,6 +22,11 @@ import './App.css';
 import Meta from 'antd/lib/card/Meta';
 import { useState } from 'react';
 import ProjectCard from './ProjectCard';
+import hrImg from '../assets/hr.png';
+import nestjsPostgresImg from '../assets/nestjs-postgres.png';
+import pomodoroOneImg from '../assets/pb-1.png';
+import pomodoroTwoImg from '../assets/pb-2.png';
+import pomodoroThreeImg from '../assets/pb-3.png';
 
 function App() {
   const [visible, setVisible] = useState(false);
@@ -167,7 +172,7 @@ function App() {
                 description:
                   'A microservice that can handle thousands of requests per second.',
                 github: 'https://github.com/SDC-Team-Miami/Reviews-API',
-                photos: ['/assets/nestjs-postgres.png'],
+                photos: [nestjsPostgresImg],
               }}
             />
             <ProjectCard
@@ -177,9 +182,7 @@ function App() {
                   'A time management solution that can be paired with any activity or workflow.',
                 github: 'https://github.com/Matt-Teran/Pomodoro-Buddy',
                 photos: [
-                  '/assets/pb-1.png',
-                  '/assets/pb-2.png',
-                  '/assets/pb-3.png',
+                  pomodoroOneImg, pomodoroTwoImg, pomodoroThreeImg
                 ],
               }}
             />
@@ -200,7 +203,7 @@ function App() {
         >
           <Card
             style={{ width: 500 }}
-            cover={<img alt="example" src="/assets/hr.png" />}
+            cover={<img alt="example" src={hrImg} />}
             actions={[
               <Button
                 href="https://www.hackreactor.com/"
