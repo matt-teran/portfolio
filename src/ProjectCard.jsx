@@ -9,7 +9,7 @@ export default function ProjectCard({ app }) {
   return (
     <Card
       style={{
-        width: '25%',
+        width: '30%',
         minWidth: '350px',
         marginBottom: '5%',
       }}
