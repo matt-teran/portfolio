@@ -10,6 +10,8 @@ export default function ProjectCard({ app }) {
     <Card
       style={{
         width: '25%',
+        minWidth: '400px',
+        marginBottom: '5%',
       }}
       hoverable
       cover={
@@ -28,7 +30,7 @@ export default function ProjectCard({ app }) {
               }}
             >
               {app.photos.map((photo) => {
-                return <Image key={photo} src={photo} />;
+                return <Image height="213" key={photo} src={photo} />;
               })}
             </Image.PreviewGroup>
           </div>

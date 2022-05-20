@@ -23,10 +23,17 @@ import Meta from 'antd/lib/card/Meta';
 import { useState } from 'react';
 import ProjectCard from './ProjectCard';
 import hrImg from '../assets/hr.png';
-import nestjsPostgresImg from '../assets/nestjs-postgres.png';
+import nestjsPostgresImg from '../assets/nestjs-postgres.webp';
 import pomodoroOneImg from '../assets/pb-1.png';
 import pomodoroTwoImg from '../assets/pb-2.png';
 import pomodoroThreeImg from '../assets/pb-3.png';
+import loveLetterLogo from '../assets/love-letter-logo.webp';
+import bestestBuyOneImg from '../assets/bestestbuy-1.webp';
+import bestestBuyTwoImg from '../assets/bestestbuy-2.webp';
+import bestestBuyThreeImg from '../assets/bestestbuy-3.webp';
+import bestestBuyFourImg from '../assets/bestestbuy-4.webp';
+import loveLetterOneImg from '../assets/love-letter-1.webp';
+import loveLetterTwoImg from '../assets/love-letter-2.webp';
 
 function App() {
   const [visible, setVisible] = useState(false);
@@ -36,7 +43,8 @@ function App() {
     <div className="App">
       <Layout
         style={{
-          height: '300vh',
+          // height: '450vh',
+          background: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='100%25' width='100%25'%3E%3Cdefs%3E%3Cpattern id='doodad' width='46.19' height='40' viewBox='0 0 34.64101615137755 30' patternUnits='userSpaceOnUse' patternTransform='rotate(135)'%3E%3Crect width='100%25' height='100%25' fill='rgba(240, 242, 245,1)'/%3E%3Cpath d='M-20-20h200v200h-200M33.77 25.5L25.98 21L18.19 25.5L18.19 34.5L25.98 39L33.77 34.5zM16.45 25.5L8.66 21L0.87 25.5L0.87 34.5L8.66 39L16.45 34.5zM7.79 10.5L0 6L-7.79 10.5L-7.79 19.5L0 24L7.79 19.5zM16.45-4.5L8.66-9L0.87-4.5L0.87 4.5L8.66 9L16.45 4.5zM33.77-4.5L25.98-9L18.19-4.5L18.19 4.5L25.98 9L33.77 4.5zM42.43 10.5L34.64 6L26.85 10.5L26.85 19.5L34.64 24L42.43 19.5zM25.11 10.5L17.32 6L9.53 10.5L9.53 19.5L17.32 24L25.11 19.5z' fill='rgba(240, 242, 245,1)'/%3E%3Cpath d='M-20-20h200v200h-200M24.21 25.25L15.98 20.5L7.75 25.25L7.75 34.75L15.98 39.5L24.21 34.75zM6.89 25.25L-1.34 20.5L-9.57 25.25L-9.57 34.75L-1.34 39.5L6.89 34.75zM-1.77 10.25L-10 5.5L-18.23 10.25L-18.23 19.75L-10 24.5L-1.77 19.75zM6.89-4.75L-1.34-9.5L-9.57-4.75L-9.57 4.75L-1.34 9.5L6.89 4.75zM24.21-4.75L15.98-9.5L7.75-4.75L7.75 4.75L15.98 9.5L24.21 4.75zM32.87 10.25L24.64 5.5L16.41 10.25L16.41 19.75L24.64 24.5L32.87 19.75zM41.53 25.25L33.3 20.5L25.07 25.25L25.07 34.75L33.3 39.5L41.53 34.75zM15.55 40.25L7.32 35.5L-0.91 40.25L-0.91 49.75L7.32 54.5L15.55 49.75zM-10.43 25.25L-18.66 20.5L-26.89 25.25L-26.89 34.75L-18.66 39.5L-10.43 34.75zM-10.43-4.75L-18.66-9.5L-26.89-4.75L-26.89 4.75L-18.66 9.5L-10.43 4.75zM15.55-19.75L7.32-24.5L-0.91-19.75L-0.91-10.25L7.32-5.5L15.55-10.25zM41.53-4.75L33.3-9.5L25.07-4.75L25.07 4.75L33.3 9.5L41.53 4.75zM32.87 40.25L24.64 35.5L16.41 40.25L16.41 49.75L24.64 54.5L32.87 49.75zM-1.77 40.25L-10 35.5L-18.23 40.25L-18.23 49.75L-10 54.5L-1.77 49.75zM-19.09 10.25L-27.32 5.5L-35.55 10.25L-35.55 19.75L-27.32 24.5L-19.09 19.75zM-1.77-19.75L-10-24.5L-18.23-19.75L-18.23-10.25L-10-5.5L-1.77-10.25zM32.87-19.75L24.64-24.5L16.41-19.75L16.41-10.25L24.64-5.5L32.87-10.25zM50.19 10.25L41.96 5.5L33.73 10.25L33.73 19.75L41.96 24.5L50.19 19.75zM15.55 10.25L7.32 5.5L-0.91 10.25L-0.91 19.75L7.32 24.5L15.55 19.75z' fill='rgba(235, 240, 244,1)'/%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23doodad)' height='200%25' width='200%25'/%3E%3C/svg%3E ")`,
         }}
       >
         <Header
@@ -83,8 +91,11 @@ function App() {
             justifyContent: 'center',
           }}
         >
-          <Title level={5}>Hi, my name is</Title>
-          <Title style={{ marginTop: '-0.1em' }}>Matt Teran</Title>
+          <Title level={5}>Hi! My name is</Title>
+          <Title style={{ marginTop: '-0.1em' }}>Matthew Teran.</Title>
+          <Title style={{ marginTop: '-0.1em' }}>
+            I'm a Full Stack Software Engineer.
+          </Title>
           <Space style={{ display: 'flex', justifyContent: 'center' }}>
             <Button
               href="https://github.com/matt-teran/"
@@ -124,15 +135,47 @@ function App() {
           <Divider>
             <Title level={3}>About Me</Title>
           </Divider>
-          <Title level={5} style={{ width: '60%' }} id="featured">
-            I believe that my life is a never-ending journey of learning, and
-            this is why I’m deeply passionate about coding. There is a limitless
-            fountain of things to learn in software development. I’m a patient,
-            communicative, and organized person who is technically proficient in
-            JavaScript. I’ve been able to use these traits about myself to
-            thrive as a Software Engineer. Throughout my life, I’ve taken pride
-            in my problem solving capability and tenacity. With that, I’m
-            certain I can be an industrious member of any team I'm a part of.
+          <Title
+            level={5}
+            style={{ width: '50%', textAlign: 'left' }}
+            id="featured"
+          >
+            <Paragraph>
+              My name is Matt, and I believe that life is a constant learning
+              journey. Whether it’s with software, people, or my hobbies like
+              running or art – there are always more things to learn and improve
+              on. To have a rigid mindset is to fail in novel situations, and so
+              I always take responsibility for the gaps in my knowledge.
+              Shortcomings and mistakes are opportunities to improve on myself
+              and become better. I take advantage of these situations to become
+              the best Software Engineer I can be.
+            </Paragraph>
+            <Paragraph>
+              Throughout my professional career, I’ve leveraged my accelerated
+              learning ability to begin contributing as soon as possible. In the
+              Navy, this meant reframing my life and schedule to focus primarily
+              on completing the Naval Nuclear Propulsion Program. A task which
+              asked for rapidly acquiring the knowledge of nuclear physics and
+              mechanics to gain an understanding of how a massive vessel like a
+              nuclear aircraft carrier works. This is where I learned that I
+              just love the act of learning itself. I found myself in software
+              development while taking a Udemy course on Python. Immediately, I
+              was hooked. With so much open source learning materials available,
+              I continued my journey with JavaScript across the full stack. When
+              I found out about the Software Engineering Immersive Program at
+              Hack Reactor, I knew that attending would be an amazing
+              opportunity to level up my skills. Over the course of 3 months, I
+              spent over one thousand hours studying everything JavaScript, and
+              then exited the program with a deep understanding of web
+              development and its related technologies.
+            </Paragraph>
+            <Paragraph>
+              I’m deeply passionate about coding. There is a limitless fountain
+              of things to learn in software development. This hunger for more
+              knowledge, combined with my tenacious problem-solving capability
+              makes me an extremely effective Software Engineer. With that, I’m
+              certain I can be an industrious member of any team I'm a part of.
+            </Paragraph>
           </Title>
         </Content>
         {/* <Content>
@@ -150,6 +193,7 @@ function App() {
               flexDirection: 'row',
               justifyContent: 'space-evenly',
               alignItems: 'center',
+              flexWrap: 'wrap',
             }}
           >
             <ProjectCard
@@ -159,10 +203,10 @@ function App() {
                   'A retail application frontend that consists of four sections: Product Overview, Related Products, Q & A, and Reviews.',
                 github: 'https://github.com/RFCTeamSaturn/BestestBuy',
                 photos: [
-                  'https://github.com/RFCTeamSaturn/BestestBuy/raw/main/image/overview.png',
-                  'https://github.com/RFCTeamSaturn/BestestBuy/raw/main/image/relatedProduct.png',
-                  'https://github.com/RFCTeamSaturn/BestestBuy/raw/main/image/QandA.png',
-                  'https://github.com/RFCTeamSaturn/BestestBuy/raw/main/image/RatingReview.png',
+                  bestestBuyOneImg,
+                  bestestBuyTwoImg,
+                  bestestBuyThreeImg,
+                  bestestBuyFourImg,
                 ],
               }}
             />
@@ -181,9 +225,17 @@ function App() {
                 description:
                   'A time management solution that can be paired with any activity or workflow.',
                 github: 'https://github.com/Matt-Teran/Pomodoro-Buddy',
-                photos: [
-                  pomodoroOneImg, pomodoroTwoImg, pomodoroThreeImg
-                ],
+                photos: [pomodoroOneImg, pomodoroTwoImg, pomodoroThreeImg],
+              }}
+            />
+
+            <ProjectCard
+              app={{
+                name: 'Love Letter',
+                description:
+                  'Love Letter is a card game of risk, deduction, and luck for 2–4 players.',
+                github: 'https://github.com/BlueOceanPacific/BlueOceanPacific',
+                photos: [loveLetterOneImg, loveLetterTwoImg, loveLetterLogo],
               }}
             />
           </Layout>
