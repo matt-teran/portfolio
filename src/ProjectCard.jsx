@@ -10,7 +10,7 @@ export default function ProjectCard({ app }) {
     <Card
       style={{
         width: '25%',
-        minWidth: '400px',
+        minWidth: '350px',
         marginBottom: '5%',
       }}
       hoverable

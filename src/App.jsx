@@ -60,6 +60,7 @@ function App() {
           <Menu
             style={{
               width: '100%',
+              maxWidth: '100vw',
               display: 'flex',
               justifyContent: 'flex-end',
             }}
@@ -137,37 +138,26 @@ function App() {
           </Divider>
           <Title
             level={5}
-            style={{ width: '50%', textAlign: 'left' }}
+            style={{ width: '50%', minWidth: '350px', textAlign: 'center' }}
             id="featured"
           >
             <Paragraph>
               My name is Matt, and I believe that life is a constant learning
               journey. Whether it’s with software, people, or my hobbies like
               running or art – there are always more things to learn and improve
-              on. To have a rigid mindset is to fail in novel situations, and so
-              I always take responsibility for the gaps in my knowledge.
-              Shortcomings and mistakes are opportunities to improve on myself
-              and become better. I take advantage of these situations to become
-              the best Software Engineer I can be.
+              on.
             </Paragraph>
             <Paragraph>
-              Throughout my professional career, I’ve leveraged my accelerated
-              learning ability to begin contributing as soon as possible. In the
-              Navy, this meant reframing my life and schedule to focus primarily
-              on completing the Naval Nuclear Propulsion Program. A task which
-              asked for rapidly acquiring the knowledge of nuclear physics and
-              mechanics to gain an understanding of how a massive vessel like a
-              nuclear aircraft carrier works. This is where I learned that I
-              just love the act of learning itself. I found myself in software
-              development while taking a Udemy course on Python. Immediately, I
-              was hooked. With so much open source learning materials available,
-              I continued my journey with JavaScript across the full stack. When
-              I found out about the Software Engineering Immersive Program at
-              Hack Reactor, I knew that attending would be an amazing
-              opportunity to level up my skills. Over the course of 3 months, I
-              spent over one thousand hours studying everything JavaScript, and
-              then exited the program with a deep understanding of web
-              development and its related technologies.
+              I found myself in software development while taking a Udemy course
+              on Python. Immediately, I was hooked. With so much open source
+              learning materials available, I continued my journey with
+              JavaScript across the full stack. I studied on my own for about
+              two years, and then enrolled in a coding bootcamp to further
+              improve my skills. I attended Hack Reactor in February of this
+              year. Over the course of 3 months, I spent over one thousand hours
+              studying everything JavaScript, and now I’m about to graduate with
+              a deep understanding of web development, but also experience with
+              pair programming, as well as working in Agile teams.
             </Paragraph>
             <Paragraph>
               Ultimately, I’m just a person who is deeply passionate about
