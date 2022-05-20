@@ -170,11 +170,11 @@ function App() {
               development and its related technologies.
             </Paragraph>
             <Paragraph>
-              I’m deeply passionate about coding. There is a limitless fountain
-              of things to learn in software development. This hunger for more
-              knowledge, combined with my tenacious problem-solving capability
-              makes me an extremely effective Software Engineer. With that, I’m
-              certain I can be an industrious member of any team I'm a part of.
+              Ultimately, I’m just a person who is deeply passionate about
+              coding. There is a limitless fountain of things to learn in
+              software development, and when you combine my hunger for more
+              knowledge with my problem-solving capability, you get an extremely
+              effective Software Engineer.
             </Paragraph>
           </Title>
         </Content>
